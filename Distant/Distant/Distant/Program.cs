@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq; 
+
 public class Student
 {
     public string Name;
@@ -9,12 +11,14 @@ public class Student
 
 public class Program
 {
-    static void Main(string[] args)
+    public static List<Student> FindTop10Students(List<Student> allStudents)
     {
-        
-    }
-    static List<Student> FindTop10Students(List<Student> students)
-    {
-        return new List<Student>();
+        List<Student> top10 = allStudents
+                                .OrderByDescending(s => s.AverageGrade)
+                                .Take(10)
+                                .ToList();
+
+        return top10;
     }
 }
+
