@@ -19,6 +19,13 @@ namespace LR1_задание_1
             {
                 Array[i] = Convert.ToInt32(Console.ReadLine());
             }
+            double sum = 0;
+            foreach (int i in Array)
+            {
+                sum += i;
+            }
+            double average = sum / lengthArray;
+            Console.WriteLine($"Среднее значение: {average}");
         }
     }
 }
