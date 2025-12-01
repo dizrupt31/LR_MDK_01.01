@@ -26,6 +26,15 @@ namespace LR1_задание_1
             }
             double average = sum / lengthArray;
             Console.WriteLine($"Среднее значение: {average}");
+            Console.Write("Элементы меньше среднего: ");
+            foreach (int element in Array)
+            {
+                if (element < average)
+                {
+                    Console.Write($"{element} ");
+                }
+            }
         }
     }
-}
+    }
+
