@@ -42,7 +42,22 @@ namespace LR1_задание_2
                 {
                     result.Add(element);
                 }
+                Console.Write("[");
+                for (int i = 0; i < result.Count; i++)
+                {
+                    Console.Write(result[i]);
+                    if (i < result.Count - 1)
+                    {
+                        Console.Write(", ");
+                    }
+                }
+                Console.Write("]");
+
+
+                Console.WriteLine("\nНайдено простых чисел: " + result.Count); 
+
             }
         }
     }
-    }
+}
+   
